@@ -1,4 +1,6 @@
 import * as icon from './icons'
+import daneEn from '../messages/en.json'
+import danePl from '../messages/pl.json'
 
 export const navLinks = [
     {
@@ -31,8 +33,14 @@ export const contacts = [
 export const experience = [
     {
         companyName: "Zakłady mięsne Zakrzewscy",
-        position: "Trainee",
-        duties: "initial hardware diagnostics, repair of damaged components, configuration of network equipment",
+        position: {
+            en: daneEn.Experience.positions.trainee,
+            pl: danePl.Experience.positions.trainee,
+        },
+        duties: {
+            en: daneEn.Experience.duties['0job'],
+            pl: danePl.Experience.duties['0job'],
+        },
         monthStart: "07",
         yearStart: "2022",
         monthEnd: "07",
@@ -40,8 +48,14 @@ export const experience = [
     },
     {
         companyName: "Alba komputery",
-        position: "Trainee",
-        duties: "initial hardware diagnostics, repair of damaged components, hardware configuration and uploading the necessary software",
+        position: {
+            en: daneEn.Experience.positions.trainee,
+            pl: danePl.Experience.positions.trainee,
+        },
+        duties: {
+            en: daneEn.Experience.duties['1job'],
+            pl: danePl.Experience.duties['1job'],
+        },
         monthStart: "05",
         yearStart: "2019",
         monthEnd: "05",
@@ -61,9 +75,16 @@ export const email = {
 
 export const projects = [
     {
-        name: "Online Shop",
+        // name: "Online shop",
+        name: { 
+            en: daneEn.Projects['0name'], 
+            pl: danePl.Projects['0name'],
+        },
         route: "https://github.com/Bobus10/Licencjat",
-        description: "Main page contains filters by price and product categories, page pagination. Shopping cart with necessary functions (changing the number of purchased products and deleting them). Section with completed orders. Admin panel for managing the store with the functions of adding, editing, previewing and deleting products.",
+        description: {
+            en: daneEn.Projects['0description'],
+            pl: danePl.Projects['0description'],
+        },
         technologies: [ 
             {
                 src: icon.laravel.src,
@@ -84,9 +105,15 @@ export const projects = [
         ],
     },
     {
-        name: "Todo list",
+        name: { 
+            en: daneEn.Projects['1name'], 
+            pl: danePl.Projects['1name'],
+        },
         route: "https://github.com/Bobus10/ToDoList",
-        description: "Adds, deletes and edits added tasks in real time. Completed tasks move to the section with other completed tasks. ",
+        description: {
+            en: daneEn.Projects['1description'],
+            pl: danePl.Projects['1description'],
+        },
         technologies: [ 
             {
                 src: icon.laravel.src,
@@ -107,9 +134,15 @@ export const projects = [
         ],
     },
     {
-        name: "Online test",
+        name: { 
+            en: daneEn.Projects['2name'], 
+            pl: danePl.Projects['2name'],
+        },
         route: "https://github.com/Bobus10/Bicycle_card_test",
-        description: "The application displays one question out of several, collecting the selected answers. After completing the test, the user has a preview of all questions with their own and correct answers",
+        description: {
+            en: daneEn.Projects['2description'],
+            pl: danePl.Projects['2description'],
+        },
         technologies: [ 
             {
                 src: icon.laravel.src,
@@ -130,9 +163,15 @@ export const projects = [
         ],
     },
     {
-        name: "Portfolio",
+        name: { 
+            en: daneEn.Projects['3name'], 
+            pl: danePl.Projects['3name'],
+        },
         route: "https://github.com/Bobus10/portfolio",
-        description: "Frontend side made in Next.js. Fully responsible. This website is intended to bring together all my projects and experience",
+        description: {
+            en: daneEn.Projects['3description'],
+            pl: danePl.Projects['3description'],
+        },
         technologies: [ 
             {
                 src: icon.next.src,

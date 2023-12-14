@@ -1,5 +1,6 @@
 import '../globals.css'
 import Introduction from '@/components/Introduction'
+import AboutMe from '@/components/AboutMe'
 // import NavBar from '@/components/NavBar'
 import Experience from '@/components/Experience'
 import Projects from '@/components/Projects'
@@ -52,7 +53,7 @@ export default async function LocaleLayout({
               </section>
               {/* About Me */}
               <section className='flex text-center items-center lg:px-20 px-10'>
-                {children}
+                <AboutMe/>
               </section>
               {/* Contact */}
               <div className=''>
