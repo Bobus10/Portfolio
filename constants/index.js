@@ -50,7 +50,7 @@ export const experience = [
 ];
 
 export const cv = {
-    route: "./assets/pdf/Kosieradzki_Robert_CV_eng.pdf",
+    route: "./assets/pdf/Kosieradzki_Robert_CV.pdf",
     label: "Kosieradzki_Robert_CV",
 };
 
