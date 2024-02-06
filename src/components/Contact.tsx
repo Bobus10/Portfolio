@@ -6,7 +6,7 @@ import React from 'react'
 import CopyBtn from "./CopyBtn"
 
 export default function Contact() {
-
+// TODO: Change Color button create nice menu to see all contact data
   return (
     <div className="flex justify-center items-center gap-3">
         {/* Open CV */}

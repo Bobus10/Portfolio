@@ -2,16 +2,20 @@ import * as icon from './icons'
 
 export const navLinks = [
     {
-        route: "#",
+        route: "#aboutMe",
         label: "About Me",
     },
     {
-        route: "#",
+        route: "#experience",
         label: "Experience",
     },
     {
-        route: "#",
+        route: "#projects",
         label: "Projects",
+    },
+    {
+        route: "#contact",
+        label: "Contact",
     },
 ];
 

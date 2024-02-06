@@ -1,6 +1,7 @@
 import { experience } from '@/../constants'
 
 export default function Experience() {
+  // TODO: Life line with points with data when that was hapends
   return (
     <div className='text-white'>
 
@@ -13,7 +14,7 @@ export default function Experience() {
           return (
             <li key={index}>
               <p>
-                <span className='text-lg'>{exp.position}</span>
+                <span className='text-lg'>{exp.position} </span>
                 {`${exp.monthStart}.${exp.yearStart} - ${exp.monthEnd}.${exp.yearEnd}`}
               </p>
               <p className='text-body'>

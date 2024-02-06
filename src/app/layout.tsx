@@ -1,11 +1,7 @@
 import '#/public/styles/globals.css'
+import BottomBar from '@/components/BottomBar'
+import NavBar from '@/components/NavBar'
 import Introduction from '@/components/Introduction'
-import AboutMe from '@/components/AboutMe'
-// import NavBar from '@/components/NavBar'
-import Experience from '@/components/Experience'
-import Projects from '@/components/Projects'
-// import BottomBar from '@/components/BottomBar'
-import Contact from '@/components/Contact'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -13,47 +9,28 @@ export const metadata: Metadata = {
   description: 'Portfolio Robert Kosieradzki',
 }
 
-export default function RootLayout() {
-
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html className="h-full" lang='en'>
-      <body className='bg-gradient-to-b from-black via-blue-900 to-blue-500 h-full bg-no-repeat bg-fixed'>
-        <div className='flex flex-row max-lg:flex-col gap-5 mt-16'>
-          <header className='lg:w-1/2'>
-            <div className='lg:w-1/2 flex flex-col justify-center items-center lg:fixed gap-3'>
-              {/* Short Introduction */}
-              <section>
-                <Introduction /> 
-              </section>
-              {/* About Me */}
-              <section className='flex text-center items-center lg:px-20 px-10'>
-                <AboutMe/>
-              </section>
-              {/* Contact */}
-              <div className=''>
-                <Contact/>
-              </div>
-              {/* Navigation Links */}
-              {/* <div className='max-lg:hidden '>
-                <NavBar/>
-              </div> */}
-            </div>
-          </header>
-          <main className='lg:w-1/2 px-10 flex flex-col gap-5'>
-            {/* Experience */}
-            <section>
-              <Experience/>
-            </section>
-            {/* Projects */}
-            <section className='max-lg:mb-16'>
-              <Projects/>
-            </section>
-          </main>
-          {/* BottomBar to easy navigate on mobile devices */}
-          {/* <div className='lg:hidden fixed bottom-0 w-full'>
-            <BottomBar/>
-          </div> */}
+      <body>
+        {/* Page Container */}
+        <div className="img flex flex-col min-h-screen bg-center bg-fixed bg-cover bg-[url('/assets/images/programming-3652497_1920.jpg')] backdrop-filter backdrop-blur-sm">
+          <NavBar/>
+          <Introduction/>
         </div>
+        
+        <section className='min-h-screen bg-slate-900'>
+          {children}
+        </section>
+                
+        {/* TODO: Nav move to bottom or make a hamburger menu */}
+        {/* <nav className='lg:hidden sticky bottom-0'>
+          <BottomBar/>
+        </nav> */}
       </body>
     </html>
   )
