@@ -57,6 +57,29 @@ export const experience = [
     },
 ];
 
+export const education = [
+    {
+        universityName: "The John Paul II Catholic University of Lublin",
+        fieldOfStudy: "Informatics",
+        academicTitle: "Bachelor’s degree",
+        description: "lorem ipsum",
+        monthStart: "10",
+        yearStart: "2020",
+        monthEnd: "06",
+        yearEnd: "2023",
+    },
+    {
+        universityName: "The John Paul II Catholic University of Lublin",
+        fieldOfStudy: "Informatics",
+        academicTitle: "Master’s degree",
+        description: "lorem ipsum",
+        monthStart: "10",
+        yearStart: "2023",
+        monthEnd: "present",
+        yearEnd: "",
+    },
+];
+
 export const cv = {
     route: "./assets/pdf/Kosieradzki_Robert_CV.pdf",
     label: "Kosieradzki_Robert_CV",

@@ -7,21 +7,26 @@ import Experience from '@/components/Experience'
 export default function Home() {
   return (
     <>
-      <main className='px-10 flex flex-col gap-5'>
+      <main className='px-10 flex flex-col gap-5 py-5'>
         <section id='projects' className='max-lg:mb-16 min-h-screen '>
           <Projects/> 
         </section>
-        <div className='min-h-screen'>
-          <section id='aboutMe' className='max-lg:mb-16 bg-lime-400'>
-            <AboutMe/>
-          </section>
-          <section id='experience'>
-            <Experience/>
-          </section>
-        </div>
+        <section className='flex flex-col gap-5'>
+          <p className='text-head'>
+            About me
+          </p>
+          <div className='min-h-[50vh] flex sm:flex-row flex-col gap-8'>
+            <section id='aboutMe' className='max-lg:mb-16 flex sm:w-1/2 w-full text-justify'>
+              <AboutMe/>
+            </section>
+            <section id='experience' className='flex sm:w-1/2 w-full'>
+              <Experience/>
+            </section>
+          </div>
+        </section>
       </main>
 
-      <footer className=''>
+      <footer className='min-h-[50vh]'>
         {/* Contact */}
         <div id='contact' className=''>
           <Contact/>
