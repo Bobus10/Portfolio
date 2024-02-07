@@ -26,11 +26,13 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className='min-h-[50vh]'>
+      <footer className='min-h-[50vh] w-full flex flex-row max-xl:px-4'>
+        <div className='xl:basis-1/3'></div>
         {/* Contact */}
-        <div id='contact' className=''>
+        <div id='contact' className='xl:basis-1/3'>
           <Contact/>
         </div>
+        <div className='xl:basis-1/3'></div>
       </footer>
     </>
   )

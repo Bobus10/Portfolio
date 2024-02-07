@@ -5,17 +5,17 @@ export const navLinks = [
         route: "#home",
         label: "Home",
     },
-    {
-        route: "#aboutMe",
-        label: "About Me",
-    },
-    {
-        route: "#experience",
-        label: "Experience",
-    },
+    // {
+    //     route: "#experience",
+    //     label: "Experience",
+    // },
     {
         route: "#projects",
         label: "Projects",
+    },
+    {
+        route: "#aboutMe",
+        label: "About Me",
     },
     {
         route: "#contact",

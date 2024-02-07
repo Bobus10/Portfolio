@@ -1,7 +1,8 @@
 "use client"
 
-import { email } from '@/../constants'
-import { google } from '@/../constants/icons'
+import { copy } from '#/constants/icons'
+import { email } from '#/constants'
+
 import Image from 'next/image'
 
 const CopyBtn= () => {
@@ -20,12 +21,11 @@ const CopyBtn= () => {
 
   return (
     <button type="button" className="button-contact" onClick={copyEmail}>
-      Copy
       <Image
-          src={google.src}
-          alt={google.label}
-          width={24}
-          height={24}
+        src={copy.src}
+        alt={copy.label}
+        width={30}
+        height={30}
       />
     </button>
   )
