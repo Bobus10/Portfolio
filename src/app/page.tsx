@@ -8,22 +8,24 @@ export default function Home() {
   return (
     <>
       <main className='px-10 flex flex-col gap-5'>
-        <section id='projects' className='max-lg:mb-16'>
+        <section id='projects' className='max-lg:mb-16 min-h-screen '>
           <Projects/> 
         </section>
-        <section id='aboutMe' className='max-lg:mb-16'>
-          <AboutMe/>
-        </section>
-        <section id='experience'>
-          <Experience/>
-        </section>
+        <div className='min-h-screen'>
+          <section id='aboutMe' className='max-lg:mb-16 bg-lime-400'>
+            <AboutMe/>
+          </section>
+          <section id='experience'>
+            <Experience/>
+          </section>
+        </div>
       </main>
 
-      <footer>
+      <footer className=''>
         {/* Contact */}
         <div id='contact' className=''>
-            <Contact/>
-          </div>
+          <Contact/>
+        </div>
       </footer>
     </>
   )

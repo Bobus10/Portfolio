@@ -67,3 +67,13 @@ export const profile = {
     src: "./assets/svg/git_profile.svg", 
     label: "GitHub Profile Img", 
 };
+
+export const copy = { 
+    src: "./assets/svg/copy.svg", 
+    label: "Copy", 
+};
+
+export const rightArrow = { 
+    src: "./assets/svg/right-arrow.svg", 
+    label: "Right arrow", 
+};

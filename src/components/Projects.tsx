@@ -1,73 +1,89 @@
 import Image from 'next/image'
 import { projects } from '#/constants'
-import { github } from '#/constants/icons'
+import { github, rightArrow } from '#/constants/icons'
 import Link from 'next/link'
 
 export default function Projects() {
-// Układ strony: 
-//  * prawa strona: kilka zdjęć(galeria) do projektu 
-//  * lewa strona: Zostaje obecny opis(Opisać dokładniej uzytą technologię)
   return (
-    <div className='text-white'>
-      <p className='text-head'>
+    <div className='text-white '>
+      <h1 className='text-head'>
           Projects
-      </p>
-      <ul className='list-disc'>
-
-        {projects.map((project, index) => {
+      </h1>
+      <div className='flex flex-wrap gap-8 justify-center'>
+        {projects.map((project) => {
           const isRoute = (project.route && project.route.length > 0)
 
           return (
-            <li className='py-2' key={index}>
-              <p className='text-lg py-1'>
-                {project.name}
-              </p>
-              {/* Route to Github */}
-              {isRoute && 
-                <Link
-                  href={project.route}
-                  className='hover:underline underline-offset-1 flex flex-row gap-1 items-center text-center'
-                  target="_blank"
-                >
-                  Code on GitHub
+            <div className=''>
+              <div className="flex flex-col mt-6 text-gray-700 bg-stone-200 shadow-md bg-clip-border rounded-xl w-96">
+                <div className="p-6">
+                  <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                    {/* Project name */}
+                    {project.name}
+                    {/* Route to Github */}
+                    {isRoute && 
+                      <Link
+                        href={project.route}
+                        className='hover:underline underline-offset-1 flex flex-row gap-1 items-center text-center'
+                        target="_blank"
+                      >
+                        Code on GitHub
+                          <Image
+                            src={github.src}
+                            alt={github.label}
+                            width={24}
+                            height={24}
+                          />
+                      </Link>
+                    }
+                  </h5>
+                  {/* Icons of technologies used to create the project */}
+                  <div className='flex flex-row gap-2'>
+                    {project.technologies.map((technology) => {
+                      const isSrc = (technology.src && technology.src.length > 0 && technology.src.endsWith('.svg'))
+                      return (
+                        isSrc ? (
+                          <Image
+                            key={technology.label}
+                            src={technology.src}
+                            alt={technology.label}
+                            width={24}
+                            height={24}
+                            title={technology.label}
+                          />
+                        ) : (
+                          <p className='text-sm'>
+                            {technology.label}
+                          </p>
+                        )
+                      )
+                    })}
+                  </div>
+                  {/* Project Description */}
+                  <p className="block font-sans text-base antialiased font-light leading-relaxed text-inherit">
+                    {project.description}
+                  </p>
+                </div>
+                {/* Learn More */}
+                {/* <div className="p-6 pt-0">
+                  <button
+                    className="flex items-center gap-2 px-4 py-2 font-sans text-xs font-bold text-center text-gray-900 uppercase align-middle transition-all rounded-lg select-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none hover:bg-gray-900/10 active:bg-gray-900/20"
+                    type="button">
+                    Learn More
                     <Image
-                      src={github.src}
-                      alt={github.label}
+                      src={rightArrow.src}
+                      alt={rightArrow.label}
                       width={24}
                       height={24}
                     />
-                </Link>
-              }
-              {/* Project Description */}
-              <p className='py-2'>
-                {project.description}
-              </p>
-              {/* Icons of technologies used to create the project */}
-              <div className='flex flex-row gap-2'>
-                {project.technologies.map((technology) => {
-                  const isSrc = (technology.src && technology.src.length > 0 && technology.src.endsWith('.svg'))
-                  return (
-                    isSrc ? (
-                      <Image
-                        key={technology.label}
-                        src={technology.src}
-                        alt={technology.label}
-                        width={24}
-                        height={24}
-                        title={technology.label}
-                      />
-                    ) : (
-                      <p className='text-sm'>
-                        {technology.label}
-                      </p>
-                    )
-                  )
-                })}
-              </div>
-            </li>
+                  </button>
+                </div> */}
+              </div> 
+            </div>
           )
         })}
-      </ul>
+      </div>
     </div>
   )
 }
+// TODO: Create shot description and add button "Learn more" to widening card with project and show the detailed description 
