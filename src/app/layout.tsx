@@ -18,7 +18,7 @@ export default function RootLayout({
     <html className="h-full" lang='en'>
       <body>
         {/* Page Container */}
-        <div id='home' className="flex flex-col min-h-screen bg-center bg-fixed bg-cover bg-[url('./assets/images/banner.JPG')] backdrop-filter backdrop-blur-sm">
+        <div id='home' className="banner flex flex-col min-h-screen bg-center bg-fixed bg-cover bg-[url('./assets/images/banner.jpg')] backdrop-filter backdrop-blur-sm">
           <NavBar/>
           <Introduction/>
         </div>
