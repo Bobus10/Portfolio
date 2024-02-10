@@ -3,6 +3,8 @@ import BottomBar from '@/components/BottomBar'
 import NavBar from '@/components/NavBar'
 import Introduction from '@/components/Introduction'
 import { Metadata } from 'next'
+import Image from 'next/image'
+import { banner } from '#/constants'
 
 export const metadata: Metadata = {
   title: 'Portfolio Robert Kosieradzki',
@@ -18,7 +20,15 @@ export default function RootLayout({
     <html className="h-full" lang='en'>
       <body>
         {/* Page Container */}
-        <div id='home' className="bg-img flex flex-col min-h-screen">
+        <div id='home' className="flex flex-col min-h-screen">
+          <Image
+            src={banner.src}
+            alt={banner.label}
+            quality={100}
+            fill
+            sizes='100vw'
+            style={{ objectFit: 'cover' }}
+          />
           <NavBar/>
           <Introduction/>
         </div>

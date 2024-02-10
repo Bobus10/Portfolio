@@ -176,3 +176,8 @@ export const projects = [
         ],
     },
 ];
+
+export const banner = { 
+    src: "./assets/images/banner.png", 
+    label: "banner", 
+};
