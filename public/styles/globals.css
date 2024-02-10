@@ -29,3 +29,9 @@ body {
     @apply text-lg
   }
 }
+
+.bg-img {
+  background-image: url('./assets/images/banner.jpg');
+  background-position: center;
+  background-attachment: fixed;
+}

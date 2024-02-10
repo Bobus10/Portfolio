@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { projects } from '#/constants'
 import { github, rightArrow } from '#/constants/icons'
 import Link from 'next/link'
+import banner from '#/public/assets/images/programming-3652497_1920.jpg'
 
 export default function Projects() {
   return (
