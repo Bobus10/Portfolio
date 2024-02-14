@@ -15,11 +15,11 @@ export default function Home() {
           <p className='text-head'>
             About me
           </p>
-          <div className='min-h-[50vh] flex sm:flex-row flex-col gap-8'>
-            <section id='aboutMe' className='max-lg:mb-16 flex sm:w-1/2 w-full text-justify'>
+          <div id='aboutMe' className='min-h-[50vh] flex sm:flex-row flex-col gap-8'>
+            <section className='max-lg:mb-16 flex sm:w-1/2 w-full text-justify'>
               <AboutMe/>
             </section>
-            <section id='experience' className='flex sm:w-1/2 w-full'>
+            <section className='flex sm:w-1/2 w-full'>
               <Experience/>
             </section>
           </div>

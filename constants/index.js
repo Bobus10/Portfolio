@@ -40,7 +40,7 @@ export const experience = [
     {
         companyName: "Zakłady mięsne Zakrzewscy",
         position: "Trainee",
-        duties: "initial hardware diagnostics, repair of damaged components, configuration of network equipment",
+        duties: "My main duties was initial hardware diagnostics, repair of damaged components, configuration of network equipment.",
         monthStart: "07",
         yearStart: "2022",
         monthEnd: "07",
@@ -49,7 +49,7 @@ export const experience = [
     {
         companyName: "Alba komputery",
         position: "Trainee",
-        duties: "initial hardware diagnostics, repair of damaged components, hardware configuration and uploading the necessary software",
+        duties: "My main duties was initial hardware diagnostics, repair of damaged components, hardware configuration and uploading the necessary software.",
         monthStart: "05",
         yearStart: "2019",
         monthEnd: "05",
@@ -95,6 +95,7 @@ export const projects = [
         name: "Online Shop",
         route: "https://github.com/Bobus10/Licencjat",
         description: "Main page contains filters by price and product categories, page pagination. Shopping cart with necessary functions (changing the number of purchased products and deleting them). Section with completed orders. Admin panel for managing the store with the functions of adding, editing, previewing and deleting products.",
+        longDescription: "Project was made for a bachelor's thesis at the title 'Using PHP version 8.1.8 and the MySQL database management system in development of an online store.'. I used most popular framework for php Laravel, TODO:they have transparent and intuitive architecture MVC TODO:/ ",
         technologies: [ 
             {
                 src: icon.laravel.src,

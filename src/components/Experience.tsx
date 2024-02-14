@@ -4,18 +4,22 @@ export default function Experience() {
   return (
     <div className='text-white'>
       <div className='flex flex-col gap-5'>
-        <p className='text-2xl'>
+        <p className='text-2xl underline underline-offset-1'>
           * Experience *
         </p>
         {experience.map((exp, index) => {
           return (
-            <div className='flex flex-col'>
+            <div key={index} className='flex flex-col'>
               <p className='text-lg'>
                 * {exp.companyName}
               </p>
-              <p>
-                <span className=''>{exp.position} </span>
-                {`${exp.monthStart}.${exp.yearStart} - ${exp.monthEnd}.${exp.yearEnd}`}
+              <p className='flex flex-col sm:flex-row'>
+                <span className=''>
+                  {exp.position} &nbsp;
+                </span>
+                <span>
+                  {`${exp.monthStart}.${exp.yearStart} - ${exp.monthEnd}.${exp.yearEnd}`}
+                </span>
               </p>
               <p className='text-body'>
                 {exp.duties}
@@ -23,23 +27,25 @@ export default function Experience() {
             </div>
           )
         })}
-        <p className='text-2xl'>
+        <p className='text-2xl underline underline-offset-1'>
           * Education *
         </p>
-        {education.map((edu) => {
+        {education.map((edu, index) => {
           return (
-            <div className='flex flex-col'>
+            <div key={index} className='flex flex-col'>
               <p className='text-lg'>
                 * {edu.universityName}
               </p>
-              <p>
+              <p className='flex flex-col sm:flex-row'>
                 <span className=''>
                   {edu.fieldOfStudy} {edu.academicTitle}&nbsp;
                 </span>
-                {`${edu.monthStart}.${edu.yearStart} - ${edu.monthEnd}.${edu.yearEnd}`}
+                <span>
+                  {`${edu.monthStart}.${edu.yearStart} - ${edu.monthEnd}.${edu.yearEnd}`}
+                </span>
               </p>
               <p className='text-body'>
-                {edu.description}
+                {/* {edu.description} */}
               </p>
             </div>
           )
